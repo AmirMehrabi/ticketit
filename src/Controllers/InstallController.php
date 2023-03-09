@@ -28,7 +28,7 @@ class InstallController extends Controller
     public function publicAssets()
     {
         $public = $this->allFilesList(public_path('vendor/ticketit'));
-        $assets = $this->allFilesList(base_path('vendor/kordy/ticketit/src/Public'));
+        $assets = $this->allFilesList(base_path('vendor/amoori/ticketit/src/Public'));
         if ($public !== $assets) {
             Artisan::call('vendor:publish', [
                 '--provider' => 'Kordy\\Ticketit\\TicketitServiceProvider',
